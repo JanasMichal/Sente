@@ -34,7 +34,22 @@ namespace Commisions.Business.Processors
 
         private void CountSubordinat(User user)
         {
+            int count = 0;
+            GetAllSubordinates(user.Id, ref count);
+            user.SubordinatesCount = count;
+            
+        }
+        private void GetAllSubordinates(int userId, ref int count)
+        {
+            var subordinates = users.List.Where(x => x.SupervisorId == userId).Select(x => x).ToList();
 
+            if(subordinates.Any(x => x.HasSuboridantes == false))
+            {
+                count += subordinates.Where(x => x.HasSuboridantes == false).Select(x => x).ToList().Count;
+            }
+
+            foreach (var user in subordinates)
+                GetAllSubordinates(user.Id, ref count);
         }
 
         private void IsUserSupervisor(int userId)
