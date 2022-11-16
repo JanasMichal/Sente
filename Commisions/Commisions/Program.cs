@@ -3,6 +3,7 @@ using Commisions.Business.Contract;
 using Commisions.Business.Misc;
 using Commisions.Business.Processors;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Commisions
 {
@@ -21,6 +22,7 @@ namespace Commisions
             var manage = serviceProvider.GetService<IManagment>();
 
             manage.Run();
+            Console.ReadKey();
         }
     }
 }
