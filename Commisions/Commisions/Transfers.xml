@@ -1,0 +1,17 @@
+<przelewy>
+    <przelew od="2" kwota="100"/>
+    <przelew od="3" kwota="50"/>
+    <przelew od="4" kwota="100"/>
+    <przelew od="4" kwota="200"/>
+    <przelew od="6" kwota="100"/>
+    <przelew od="5" kwota="100"/>
+    <przelew od="6" kwota="50"/>
+    <przelew od="10" kwota="100"/>
+    <przelew od="8" kwota="200"/>
+    <przelew od="6" kwota="100"/>
+    <przelew od="2" kwota="100"/>
+    <przelew od="8" kwota="50"/>
+    <przelew od="10" kwota="100"/>
+    <przelew od="9" kwota="200"/>
+    <przelew od="5" kwota="100"/>
+</przelewy>
